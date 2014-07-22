@@ -13,8 +13,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Connect_AccountManagement",
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Connect_AccountLogin", "..\AccountLogin\Connect_AccountLogin.vbproj", "{FE2CE063-B9F4-423E-8FCD-E1E3FB573186}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "dnn.connect.interfaces", "..\..\dnn.connect.Interfaces\dnn.connect.interfaces.vbproj", "{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,12 +50,6 @@ Global
 		{FE2CE063-B9F4-423E-8FCD-E1E3FB573186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE2CE063-B9F4-423E-8FCD-E1E3FB573186}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE2CE063-B9F4-423E-8FCD-E1E3FB573186}.Release|x86.ActiveCfg = Release|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CCC36A49-00F2-481C-BEF3-A5DE7C32329E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
