@@ -209,7 +209,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property LoginWithEmail() As Boolean
             Get
-                If Not Settings("LoginWithEmail") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("LoginWithEmail")) Then
                     Return CType(Settings("LoginWithEmail"), Boolean)
                 End If
                 Return True
@@ -218,7 +218,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property PreSelectRole() As Integer
             Get
-                If Not Settings("PreSelectRole") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("PreSelectRole")) Then
                     Return CType(Settings("PreSelectRole"), Integer)
                 End If
                 Return Null.NullInteger
@@ -227,7 +227,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property AllowReports() As Boolean
             Get
-                If Not Settings("AllowReports") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AllowReports")) Then
                     Return CType(Settings("AllowReports"), Boolean)
                 End If
                 Return True
@@ -254,7 +254,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property AllowExport() As Boolean
             Get
-                If Not Settings("AllowExport") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AllowExport")) Then
                     Return CType(Settings("AllowExport"), Boolean)
                 End If
                 Return True
@@ -268,7 +268,7 @@ Namespace Connect.Libraries.UserManagement
                     Return False
                 End If
 
-                If Not Settings("AllowCreate") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AllowCreate")) Then
                     Return CType(Settings("AllowCreate"), Boolean)
                 End If
 
@@ -279,7 +279,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property AllowHardDelete() As Boolean
             Get
-                If Not Settings("AllowHardDelete") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AllowHardDelete")) Then
                     Return CType(Settings("AllowHardDelete"), Boolean)
                 End If
                 Return False
@@ -288,7 +288,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property AllowDelete() As Boolean
             Get
-                If Not Settings("AllowDelete") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AllowDelete")) Then
                     Return CType(Settings("AllowDelete"), Boolean)
                 End If
                 Return False
@@ -337,7 +337,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property RedirectAfterSubmit() As Integer
             Get
-                If Not Settings("RedirectAfterSubmit") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("RedirectAfterSubmit")) Then
                     Return CType(Settings("RedirectAfterSubmit"), Integer)
                 End If
                 Return Null.NullInteger
@@ -355,7 +355,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property NotifyUser() As Boolean
             Get
-                If Not Settings("NotifyUser") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("NotifyUser")) Then
                     Return CType(Settings("NotifyUser"), Boolean)
                 End If
                 Return False
@@ -364,7 +364,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property IncludeHeaders() As Boolean
             Get
-                If Not Settings("IncludeHeaders") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("IncludeHeaders")) Then
                     Return CType(Settings("IncludeHeaders"), Boolean)
                 End If
                 Return True
@@ -373,7 +373,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property AddToRoleOnSubmit() As Integer
             Get
-                If Not Settings("AddToRoleOnSubmit") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("AddToRoleOnSubmit")) Then
                     Try
                         Return CType(Settings("AddToRoleOnSubmit"), Integer)
                     Catch ex As Exception
@@ -385,7 +385,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property RemoveFromRoleOnSubmit() As Integer
             Get
-                If Not Settings("RemoveFromRoleOnSubmit") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("RemoveFromRoleOnSubmit")) Then
                     Try
                         Return CType(Settings("RemoveFromRoleOnSubmit"), Integer)
                     Catch ex As Exception
@@ -430,7 +430,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property PreloadList() As Boolean
             Get
-                If Not Settings("PreloadList") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("PreloadList")) Then
                     Return CType(Settings("PreloadList"), Boolean)
                 End If
                 Return False
@@ -439,7 +439,7 @@ Namespace Connect.Libraries.UserManagement
 
         Protected ReadOnly Property FilterSelectByRole() As Integer
             Get
-                If Not Settings("FilterSelectByRole") Is Nothing Then
+                If Not String.IsNullOrEmpty(Settings("FilterSelectByRole")) Then
                     Return CType(Settings("FilterSelectByRole"), Integer)
                 End If
                 Return Null.NullInteger
