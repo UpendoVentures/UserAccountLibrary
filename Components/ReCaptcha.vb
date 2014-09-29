@@ -25,6 +25,7 @@ Imports System.Web.UI
 Imports DotNetNuke.Entities.Profile
 Imports System.Net
 Imports System.IO
+Imports DotNetNuke.Entities.Portals
 
 Namespace Connect.Libraries.UserManagement
     Public Class ReCaptcha
@@ -39,7 +40,12 @@ Namespace Connect.Libraries.UserManagement
             Dim postData As String = String.Format("privatekey={0}&remoteip={1}&challenge={2}&response={3}", strPrivateKey, strRemoteIp, strChallenge, strResponse)
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
 
-            Dim request As WebRequest = WebRequest.Create("http://www.google.com/recaptcha/api/verify")
+            Dim strProtocoll As String = "http"
+            If PortalSettings.Current.ActiveTab.IsSecure Then
+                strProtocoll = "https"
+            End If
+
+            Dim request As WebRequest = WebRequest.Create(String.Format("{0}://www.google.com/recaptcha/api/verify", strProtocoll))
             request.Method = "POST"
             request.ContentLength = byteArray.Length
             request.ContentType = "application/x-www-form-urlencoded"

@@ -344,6 +344,15 @@ Namespace Connect.Libraries.UserManagement
             End Get
         End Property
 
+        Protected ReadOnly Property RedirectAfterLogin() As Integer
+            Get
+                If Not String.IsNullOrEmpty(Settings("RedirectAfterLogin")) Then
+                    Return CType(Settings("RedirectAfterLogin"), Integer)
+                End If
+                Return Null.NullInteger
+            End Get
+        End Property
+
         Protected ReadOnly Property NotifyRole() As String
             Get
                 If Not Settings("NotifyRole") Is Nothing Then
@@ -1529,9 +1538,13 @@ Namespace Connect.Libraries.UserManagement
                         End Try
 
                         
+                        Dim strProtocoll As String = "http"
+                        If PortalSettings.ActiveTab.IsSecure Then
+                            strProtocoll = "https"
+                        End If
 
                         Dim strScript As New LiteralControl
-                        strScript.Text = String.Format("<script type=""text/javascript"" src=""http://www.google.com/recaptcha/api/challenge?k={0}""></script>", strPublicKey)
+                        strScript.Text = String.Format("<script type=""text/javascript"" src=""{0}://www.google.com/recaptcha/api/challenge?k={1}""></script>", strProtocoll, strPublicKey)
 
                         Dim pnlCaptcha As New Panel
                         pnlCaptcha.ID = plhControls.ID & "_ReCaptchaPanel"
