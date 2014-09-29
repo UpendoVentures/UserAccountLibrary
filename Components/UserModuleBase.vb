@@ -2752,7 +2752,7 @@ Namespace Connect.Libraries.UserManagement
 
             End If
 
-            If Not ctlRegionDrop Is Nothing Then
+            If Not ctlRegionDrop Is Nothing AndAlso Not entries Is Nothing Then
                 ctlRegionDrop.Visible = True
                 CType(ctlRegionDrop, DropDownList).Items.Clear()
                 For Each entry As Lists.ListEntryInfo In entries
