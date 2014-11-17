@@ -103,7 +103,7 @@ Namespace Connect.Libraries.UserManagement
             Get
                 Dim strControls As String() = New String() {}
 
-                If Not Settings("AdditionalControls") Is Nothing Then
+                If Not String.IsNullOrWhiteSpace(Settings("AdditionalControls")) Then
                     Try
                         strControls = Convert.ToString(Settings("AdditionalControls")).Split(Char.Parse(";"))
                     Catch
@@ -1537,7 +1537,7 @@ Namespace Connect.Libraries.UserManagement
                         Catch
                         End Try
 
-                        
+
                         Dim strProtocoll As String = "http"
                         If PortalSettings.ActiveTab.IsSecure Then
                             strProtocoll = "https"
@@ -1671,7 +1671,7 @@ Namespace Connect.Libraries.UserManagement
                         Dim blnIsInRole As Boolean = False
 
                         If Not objUser Is Nothing Then
-                            blnIsInRole= objUser.IsInRole(strRole) 
+                            blnIsInRole = objUser.IsInRole(strRole)
                         End If
 
                         If blnIsInRole = False Then
