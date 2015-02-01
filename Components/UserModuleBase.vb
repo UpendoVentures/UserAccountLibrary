@@ -257,6 +257,24 @@ Namespace Connect.Libraries.UserManagement
             End Get
         End Property
 
+        Protected ReadOnly Property AllowEmailUsers() As Boolean
+            Get
+                If Not String.IsNullOrEmpty(Settings("AllowEmailUsers")) Then
+                    Return CType(Settings("AllowEmailUsers"), Boolean)
+                End If
+                Return True
+            End Get
+        End Property
+
+        Protected ReadOnly Property AllowMessageUsers() As Boolean
+            Get
+                If Not String.IsNullOrEmpty(Settings("AllowMessageUsers")) Then
+                    Return CType(Settings("AllowMessageUsers"), Boolean)
+                End If
+                Return True
+            End Get
+        End Property
+
         Protected ReadOnly Property AllowCreate() As Boolean
             Get
                 If DotNetNuke.Security.Membership.MembershipProvider.Instance().RequiresQuestionAndAnswer Then
