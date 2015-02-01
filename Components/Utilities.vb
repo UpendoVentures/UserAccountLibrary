@@ -1,8 +1,4 @@
-﻿Imports DotNetNuke.Entities.Users
-Imports DotNetNuke.Security
-Imports DotNetNuke.Common.Utilities
-
-'***********************************************************************************
+﻿'***********************************************************************************
 '  Connect UsersLibrary
 '
 '  Copyright (C) 2013-2014 DNN-Connect Association, Philipp Becker
@@ -23,6 +19,10 @@ Imports DotNetNuke.Common.Utilities
 '  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 '
 '***********************************************************************************
+
+Imports DotNetNuke.Entities.Users
+Imports DotNetNuke.Security
+Imports DotNetNuke.Common.Utilities
 
 Namespace Connect.Libraries.UserManagement
     Public Class Utilities
