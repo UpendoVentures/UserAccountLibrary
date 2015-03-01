@@ -30,7 +30,7 @@ Namespace Connect.Libraries.UserManagement
         Public Shared Function GetVerificationCode(User As UserInfo) As String
 
             Dim ps As New PortalSecurity
-            Dim code As String = ps.EncryptString(User.PortalID + "-" + User.UserID, Config.GetDecryptionkey())
+            Dim code As String = ps.EncryptString(User.PortalID.ToString() + "-" + User.UserID.ToString(), Config.GetDecryptionkey())
             Return code.Replace("+", ".").Replace("/", "-").Replace("=", "_")
 
         End Function
