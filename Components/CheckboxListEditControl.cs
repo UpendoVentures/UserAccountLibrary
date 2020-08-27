@@ -178,7 +178,7 @@ namespace Connect.Libraries.UserManagement
         protected override void OnPreRender(EventArgs e)
         {
             base.OnPreRender(e);
-            if (Page is object & EditMode == PropertyEditorMode.Edit)
+            if (Page != null & EditMode == PropertyEditorMode.Edit)
             {
                 Page.RegisterRequiresPostBack(this);
             }
